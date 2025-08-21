@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kyler Chan — Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="/my-portfolio/assets/kc_image_pfp.png" />
+  <link rel="stylesheet" href="/my-portfolio/style.css" />
+</head>
+<body class="min-h-screen bg-gray-50 font-sans text-gray-900">
+  <div class="layout flex">
+    <aside class="sidebar bg-white/80 border-r border-gray-200 flex flex-col items-center gap-6 p-6">
+      <div class="flex flex-col items-center gap-3">
+        <img src="/my-portfolio/assets/kc_image_pfp.png" alt="Profile" class="profile-img shadow-lg" />
+        <div class="text-center">
+          <div class="text-lg font-semibold">Kyler Chan</div>
+          <div class="text-xs text-gray-500">Student Developer - Singapore</div>
+        </div>
+      </div>
+
+      <div class="w-full mt-4 card p-4">
+        <h3 class="text-sm font-semibold mb-2">About</h3>
+        <p class="text-sm text-gray-600 mb-3">I build clean, accessible frontends using HTML, Tailwind CSS and JavaScript. I focus on solving small, real problems — clear UX, fast load times, and maintainable code. As a student developer I aim to ship helpful tools and improve my skills through projects and experimentation.</p>
+        <div class="text-xs text-gray-500">Details</div>
+        <dl class="mt-2 space-y-2 text-sm">
+          <div><span class="text-slate-400">Location</span><div class="font-medium">Singapore</div></div>
+          <div><span class="text-slate-400">Age</span><div class="font-medium">13</div></div>
+        </dl>
+      </div>
+
+      <div class="w-full mt-4 card p-4">
+        <h3 class="text-sm font-semibold mb-2">Skills</h3>
+        <div class="text-xs text-slate-500 mb-2">Frontend</div>
+        <div class="flex flex-wrap gap-2 mb-3">
+          <span class="px-3 py-1 bg-slate-100 rounded-full text-sm font-medium">HTML</span>
+          <span class="px-3 py-1 bg-slate-100 rounded-full text-sm font-medium">CSS</span>
+          <span class="px-3 py-1 bg-slate-100 rounded-full text-sm font-medium">JavaScript</span>
+          <span class="px-3 py-1 bg-slate-100 rounded-full text-sm font-medium">Tailwind</span>
+        </div>
+        <div class="text-xs text-slate-500 mb-2">Tools</div>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-slate-100 rounded-full text-sm font-medium">VS Code</span>
+          <span class="px-3 py-1 bg-slate-100 rounded-full text-sm font-medium">Git</span>
+          <span class="px-3 py-1 bg-slate-100 rounded-full text-sm font-medium">Browser DevTools</span>
+        </div>
+      </div>
+
+      <nav class="w-full mt-4">
+        <ul class="space-y-2 text-sm w-full">
+          <li><a href="#featured" data-scroll="#featured" class="w-full block text-left px-3 py-2 rounded-md hover:bg-slate-50 focus-ring">Featured</a></li>
+          <li><a href="#skills" data-scroll="#skills" class="w-full block text-left px-3 py-2 rounded-md hover:bg-slate-50 focus-ring">Skills</a></li>
+          <li><a href="#contact" data-scroll="#contact" class="w-full block text-left px-3 py-2 rounded-md hover:bg-slate-50 focus-ring">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="mt-auto text-center text-xs text-slate-400">Built with HTML, Tailwind & practice</div>
+    </aside>
+
+    <main class="content">
+      <div class="card p-8">
+        <header class="mb-6">
+          <h1 class="text-3xl md:text-4xl font-extrabold">Hi, I'm Kyler <span class="text-green-600">.</span></h1>
+          <p class="text-slate-600 mt-2 max-w-2xl">I create clean, performant web interfaces and small tools. Below are featured projects, a focused skills list, and contact details.</p>
+        </header>
+
+        <section id="featured" class="mt-6">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-xl font-semibold">Featured Projects</h2>
+            <p class="text-sm text-slate-500">Demos & source</p>
+          </div>
+
+          <div class="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+            <article class="card p-5 flex flex-col h-full hover:shadow-md transition cursor-pointer">
+              <div>
+                <h3 class="font-semibold">Email Validator</h3>
+                <p class="text-slate-600 text-sm mt-2">Lightweight validator using an email-check API. Focus: quick feedback and small bundle.</p>
+              </div>
+              <div class="mt-4 flex-1"></div>
+              <div class="pt-3 flex gap-3"> 
+                <a role="button" class="btn-code px-3 py-1.5 border rounded-md text-sm focus-ring" href="https://github.com/KylerChan/email-validation" data-url="https://github.com/KylerChan/email-validation" target="_blank" rel="noopener">Code</a>
+              </div>
+            </article>
+
+            <article class="card p-5 flex flex-col h-full hover:shadow-md transition cursor-pointer">
+              <div>
+                <h3 class="font-semibold">Dog Generator</h3>
+                <p class="text-slate-600 text-sm mt-2">Generates random dog images using an API — small demo showcasing fetch, async handling and responsive UI.</p>
+              </div>
+              <div class="mt-4 flex-1"></div>
+              <div class="pt-3 flex gap-3">
+                <a role="button" class="btn-demo px-3 py-1.5 border rounded-md text-sm focus-ring" href="https://dog-gen.vercel.app/" data-url="https://dog-gen.vercel.app/" target="_blank" rel="noopener">Live</a>
+                <a role="button" class="btn-code px-3 py-1.5 border rounded-md text-sm focus-ring" href="https://github.com/KylerChan/dog-gen" data-url="https://github.com/KylerChan/dog-gen" target="_blank" rel="noopener">Code</a>
+              </div>
+            </article>
+
+            <article class="card p-5 flex flex-col h-full hover:shadow-md transition cursor-pointer">
+              <div>
+                <h3 class="font-semibold">Budget Tracker</h3>
+                <p class="text-slate-600 text-sm mt-2">Simple budget app to track personal expenses with a simple UI and local storage.</p>
+              </div>
+              <div class="mt-4 flex-1"></div>
+              <div class="pt-3 flex gap-3">
+                <a role="button" class="btn-demo px-3 py-1.5 border rounded-md text-sm focus-ring" href="https://simple-budgeting.vercel.app/" data-url="https://simple-budgeting.vercel.app/" target="_blank">Live</a>
+                <a role="button" class="btn-code px-3 py-1.5 border rounded-md text-sm focus-ring" href="https://github.com/KylerChan/simple-budgeting" data-url="https://github.com/KylerChan/simple-budgeting" target="_blank" rel="noopener">Code</a>
+              </div>
+            </article>
+
+            <article class="card p-5 flex flex-col h-full hover:shadow-md transition cursor-pointer">
+              <div>
+                <h3 class="font-semibold">Website Analyzer</h3>
+                <p class="text-slate-600 text-sm mt-2">Website analyser made in Python to get details about website like headers, security, and much more.</p>
+              </div>
+              <div class="mt-4 flex-1"></div>
+              <div class="pt-3 flex gap-3">
+                <a role="button" class="btn-code px-3 py-1.5 border rounded-md text-sm focus-ring" href="https://github.com/KylerChan/website-analysis" data-url="https://github.com/KylerChan/website-analysis" target="_blank" rel="noopener">Code</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section id="skills" class="mt-8">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-xl font-semibold">Skills</h2>
+            <p class="text-sm text-slate-500">Focused list</p>
+          </div>
+
+          <div class="grid gap-6 grid-cols-1 md:grid-cols-2">
+            <div class="card p-4 cursor-pointer">
+              <h4 class="font-semibold mb-2">Frontend</h4>
+              <ul class="text-sm text-slate-600 space-y-1">
+                <li>HTML — semantic, accessible markup</li>
+                <li>CSS / Tailwind — responsive layouts & utilities</li>
+                <li>JavaScript — DOM, fetch, small interactive components</li>
+              </ul>
+            </div>
+
+            <div class="card p-4 cursor-pointer">
+              <h4 class="font-semibold mb-2">Tools</h4>
+              <ul class="text-sm text-slate-600 space-y-1">
+                <li>VS Code</li>
+                <li>Git & GitHub</li>
+                <li>Browser devtools</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="mt-8">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-xl font-semibold">Let’s Connect</h2>
+            <p class="text-sm text-slate-500">Say hello</p>
+          </div>
+
+          <!-- Contact block (replaces previous contact markup) -->
+          <div class="card p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Left: quick contact + fallback -->
+            <div class="flex flex-col gap-4">
+              <p class="text-slate-600">Prefer email? Use the button below or the form. If the form fails there is a mailto fallback.</p>
+
+              <div class="inline-flex self-start w-max items-center bg-white border rounded-md overflow-hidden shadow-sm divide-x divide-gray-100">
+                <a href="mailto:kyler.chanpinhan@gmail.com" id="emailLink" class="px-4 py-2 text-sm text-slate-800 hover:bg-slate-50 block">
+                  kyler.chanpinhan@gmail.com
+                </a>
+                <button id="copyEmailBtn" type="button" aria-label="Copy email" class="px-3 py-2 hover:bg-slate-50 text-slate-700 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </button>
+              </div>
+              <span id="emailCopyStatus" class="text-sm text-slate-500 ml-3" aria-live="polite"></span>
+
+              <div class="flex gap-2">
+                <a href="https://github.com/KylerChan" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-3 py-2 border rounded-md text-sm">GitHub</a>
+                <a href="https://x.com/kylercph" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-3 py-2 border rounded-md text-sm">Twitter</a>
+              </div>
+            </div>
+
+            <!-- Right: form -->
+            <form id="contactForm" class="space-y-3 bg-white rounded-md p-4 shadow-sm" novalidate>
+              <label class="block">
+                <span class="text-sm font-medium text-slate-700">Name</span>
+                <input id="name" name="name" required type="text" class="mt-1 block w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-emerald-200" />
+                <span class="text-xs text-red-500 mt-1 hidden" id="nameError">Please enter your name.</span>
+              </label>
+
+              <label class="block">
+                <span class="text-sm font-medium text-slate-700">Email</span>
+                <input id="email" name="email" required type="email" class="mt-1 block w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-emerald-200" />
+                <span class="text-xs text-red-500 mt-1 hidden" id="emailError">Please enter a valid email.</span>
+              </label>
+
+              <label class="block">
+                <span class="text-sm font-medium text-slate-700">Message</span>
+                <textarea id="message" name="message" required rows="4" class="mt-1 block w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-emerald-200"></textarea>
+                <span class="text-xs text-red-500 mt-1 hidden" id="messageError">Please enter a message.</span>
+              </label>
+
+              <div class="flex items-center gap-3">
+                <button id="submitBtn" type="submit" class="px-4 py-2 bg-emerald-600 text-white rounded-md hover:bg-emerald-700">Send</button>
+                <div id="formStatus" class="text-sm text-slate-600" aria-live="polite"></div>
+              </div>
+
+              <div class="text-xs text-slate-500">
+                If the form can't submit, send an email directly to
+                <a href="mailto:kyler.chanpinhan@gmail.com" class="text-emerald-600 hover:underline">kyler.chanpinhan@gmail.com</a>.
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+</body>
+<script>
+  (function(){
+    // CONFIG: replace with your Formspree endpoint (e.g. https://formspree.io/f/yourID)
+    const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xanbgzgy';
+
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const statusEl = document.getElementById('formStatus');
+
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const messageError = document.getElementById('messageError');
+
+    const copyBtn = document.getElementById('copyEmailBtn');
+    const copyStatus = document.getElementById('emailCopyStatus');
+    const emailText = 'kyler.chanpinhan@gmail.com';
+
+    // Email copy
+    copyBtn && copyBtn.addEventListener('click', async (e) => {
+      e.preventDefault();
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        try {
+          await navigator.clipboard.writeText(emailText);
+          copyStatus.textContent = 'Copied!';
+        } catch (err) {
+          copyStatus.textContent = 'Copy failed';
+        }
+      } else {
+        // fallback
+        const ta = document.createElement('textarea');
+        ta.value = emailText;
+        ta.setAttribute('readonly', '');
+        ta.style.position = 'absolute';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand('copy'); copyStatus.textContent = 'Copied!'; } catch(e) { copyStatus.textContent = 'Copy failed'; }
+        document.body.removeChild(ta);
+      }
+      setTimeout(()=> copyStatus.textContent = '', 2000);
+    });
+
+    function validEmail(v){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+    function clearErrors(){
+      [nameError, emailError, messageError].forEach(el => el && el.classList.add('hidden'));
+    }
+
+    form && form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      clearErrors();
+      statusEl.textContent = '';
+
+      let ok = true;
+      if (!nameInput.value.trim()) { nameError.classList.remove('hidden'); ok = false; }
+      if (!validEmail(emailInput.value.trim())) { emailError.classList.remove('hidden'); ok = false; }
+      if (!messageInput.value.trim()) { messageError.classList.remove('hidden'); ok = false; }
+      if (!ok) return;
+
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-70');
+      statusEl.textContent = 'Sending...';
+
+      try {
+        const payload = {
+          name: nameInput.value.trim(),
+          email: emailInput.value.trim(),
+          message: messageInput.value.trim()
+        };
+
+        const res = await fetch(FORMSPREE_ENDPOINT, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+          statusEl.textContent = 'Thanks — message sent.';
+          form.reset();
+        } else {
+          // show fallback mailto link when server returns error
+          const text = await res.text().catch(()=> '');
+          statusEl.innerHTML = 'Submission failed — please <a href="mailto:kyler.chanpinhan@gmail.com" class="text-emerald-600 underline">email me directly</a>.';
+          console.error('Formspree error:', res.status, text);
+        }
+      } catch (err) {
+        statusEl.innerHTML = 'Network error — please <a href="mailto:kyler.chanpinhan@gmail.com" class="text-emerald-600 underline">email me directly</a>.';
+        console.error(err);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove('opacity-70');
+        setTimeout(()=> { /* clear status after a short time */ }, 4000);
+      }
+    });
+  })();
+</script>
+<script src="/my-portfolio/script.js"></script>
+</html>
