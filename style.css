@@ -147,3 +147,10 @@ a[onclick]:hover {
 
 .text-accent { color: var(--accent); }
 .bg-accent-fade { background: linear-gradient(90deg, rgba(22,163,74,0.06), rgba(14,165,164,0.04)); }
+
+.img-square {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  display: block;
+}
