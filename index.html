@@ -15,16 +15,19 @@
   <meta name="twitter:description" content="Developer portfolio: clean web interfaces, featured projects, skills, and contact.">
   <meta name="twitter:image" content="https://kylers-portfolio.vercel.app/assets/og-image.png">
   <link rel="canonical" href="https://kylers-portfolio.vercel.app">
-  <link rel="icon" href="/assets/kc_image_pfp.png" />
+  <link rel="icon" href="/my-portfolio/assets/kc_image_pfp.png" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./style.css"/>
+  <link rel="preload" as="image" href="/my-portfolio/assets/kc_image_pfp.png">
 </head>
 <body class="min-h-screen bg-gray-50 font-sans text-gray-900">
   <div class="layout flex">
     <aside class="sidebar bg-white/80 border-r border-gray-200 flex flex-col items-center gap-6 p-6">
       <div class="flex flex-col items-center gap-3">
-        <img src="/assets/kc_image_pfp.png" alt="Profile" class="profile-img shadow-lg" />
+        <img src="/my-portfolio/assets/kc_image_pfp.png" loading="lazy" decoding="async" alt="Kyler Chan profile photo" class="profile-img shadow-lg" />
         <div class="text-center">
           <div class="text-lg font-semibold">Kyler Chan</div>
           <div class="text-xs text-gray-500">Student Developer - Singapore</div>
@@ -60,174 +63,182 @@
       <div class="mt-auto text-center text-xs text-slate-400">Built with HTML, Tailwind & practice</div>
     </aside>
 
-    <main class="content flex-1 w-full px-4 sm:px-6 md:px-8 py-6">
-      <div id="mainWrapper" class="mx-auto w-full" style="max-width: 2000px;">
-        <div class="card p-8">
-          <header class="mb-6">
-            <h1 class="text-3xl md:text-4xl font-extrabold">Hi, I'm Kyler<span class="text-green-600">.</span></h1>
-            <p class="text-slate-600 mt-2 max-w-2xl">I create clean, performant web interfaces and small tools. Below are featured projects, a focused skills list, and contact details.</p>
-          </header>
+    <main class="content" id="main">
+      <div class="card p-8">
+        <header class="mb-6">
+          <h1 class="text-3xl md:text-4xl font-extrabold">Hi, I'm Kyler<span class="text-green-600">.</span></h1>
+          <p class="text-slate-600 mt-2 max-w-2xl">I create clean, performant web interfaces and small tools. Below are featured projects, a focused skills list, and contact details.</p>
+        </header>
 
-          <section class="w-full py-16 flex flex-col items-center justify-center bg-gradient-to-b from-emerald-50 to-white">
-            <div class="max-w-2xl text-center">
-              <img src="/assets/kc_image_pfp.png" alt="Kyler Chan profile photo" class="profile-img mx-auto mb-6 shadow-lg focus-ring" tabindex="0" />
-              <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Hi, I'm Kyler Chan</h1>
-              <p class="text-lg text-slate-700 mb-6">I build clean, accessible web interfaces and tools.</p>
-              <a href="#projects" class="inline-block px-6 py-3 bg-emerald-600 text-white rounded-lg shadow-md hover:bg-emerald-700 focus-ring text-lg font-semibold transition">View Projects</a>
-            </div>
-          </section>
+        <section class="w-full py-16 flex flex-col items-center justify-center bg-gradient-to-b from-emerald-50 to-white rounded-lg">
+          <div class="max-w-2xl text-center">
+            <img src="/my-portfolio/assets/kc_image_pfp.png" alt="Kyler Chan profile photo" loading="lazy" decoding="async" class="profile-img hero-profile mx-auto mb-6 shadow-lg focus-ring" tabindex="0" />
+            <h1 class="text-4xl md:text-5xl font-extrabold mb-4">Hi, I'm Kyler Chan</h1>
+            <p class="text-lg text-slate-700 mb-6">I build clean, accessible web interfaces and tools. Open to internships.</p>
+            <a href="#projects" class="inline-block px-6 py-3 bg-emerald-600 text-white rounded-lg shadow-md hover:bg-emerald-700 focus-ring text-lg font-semibold transition">View Projects</a>
+          </div>
+        </section>
 
-          <section id="projects" class="max-w-5xl mx-auto py-12">
-            <h2 class="text-2xl font-bold mb-6 text-center">Featured Projects</h2>
-            <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-              <div class="card p-5 flex flex-col h-full shadow-md hover:shadow-lg transition">
-                <img src="/assets/email-valid-thumb.png" alt="Email Validator UI showing validation result" class="rounded-md mb-4 w-full max-h-40 object-contain" />
-                <h3 class="font-semibold text-lg mb-2">Email Validator</h3>
-                <p class="text-slate-600 text-sm mb-3">Checks emails quickly via a small API — used by 200+ users for form validation.</p>
-                <div class="flex gap-2 mb-3">
-                  <span class="px-2 py-1 bg-emerald-100 text-emerald-700 rounded text-xs">JavaScript</span>
-                  <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">API</span>
-                  <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">Fetch</span>
-                </div>
-                <div class="flex gap-3 mt-auto">
-                  <a href="https://github.com/KylerChan/email-validation" target="_blank" rel="noopener" class="btn-code px-3 py-1.5 border rounded-md text-sm focus-ring">Code</a>
-                </div>
+        <section id="projects" class="max-w-5xl mx-auto py-12">
+          <h2 class="text-2xl font-bold mb-6 text-center">Featured Projects</h2>
+          <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="card p-5 flex flex-col h-full shadow-md hover:shadow-lg transition">
+              <img src="/my-portfolio/assets/email-valid-thumb.png" alt="Email Validator UI showing validation result" class="rounded-md mb-4 w-full max-h-40 object-contain" />
+              <h3 class="font-semibold text-lg mb-2">Email Validator</h3>
+              <p class="text-slate-600 text-sm mb-3">Checks emails quickly via a small API — used by 200+ users for form validation.</p>
+              <div class="flex gap-2 mb-3">
+                <span class="px-2 py-1 bg-emerald-100 text-emerald-700 rounded text-xs">JavaScript</span>
+                <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">API</span>
+                <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">Fetch</span>
               </div>
-
-              <div class="card p-5 flex flex-col h-full shadow-md hover:shadow-lg transition">
-                <img src="/assets/dog-gen-thumb.png" alt="Dog Generator demo showing a random dog image" class="rounded-md mb-4 w-full max-h-40 object-contain" />
-                <h3 class="font-semibold text-lg mb-2">Dog Generator</h3>
-                <p class="text-slate-600 text-sm mb-3">Random dog images from a public API — small demo showing async fetch and responsive UI.</p>
-                <div class="flex gap-2 mb-3">
-                  <span class="px-2 py-1 bg-emerald-100 text-emerald-700 rounded text-xs">JavaScript</span>
-                  <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">API</span>
-                  <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">Responsive</span>
-                </div>
-                <div class="flex gap-3 mt-auto">
-                  <a href="https://github.com/KylerChan/dog-gen" target="_blank" rel="noopener" class="btn-code px-3 py-1.5 border rounded-md text-sm focus-ring">Code</a>
-                  <a href="https://dog-gen.vercel.app/" target="_blank" rel="noopener" class="btn-demo px-3 py-1.5 border rounded-md text-sm focus-ring">Live</a>
-                </div>
-              </div>
-
-              <div class="card p-5 flex flex-col h-full shadow-md hover:shadow-lg transition">
-                <img src="/assets/budget-thumb.png" alt="Budget Tracker showing transaction list and summary" class="rounded-md mb-4 w-full max-h-40 object-contain" />
-                <h3 class="font-semibold text-lg mb-2">Budget Tracker</h3>
-                <p class="text-slate-600 text-sm mb-3">Simple local-storage budgeting app to track expenses and savings goals.</p>
-                <div class="flex gap-2 mb-3">
-                  <span class="px-2 py-1 bg-emerald-100 text-emerald-700 rounded text-xs">JavaScript</span>
-                  <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">LocalStorage</span>
-                  <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">UI</span>
-                </div>
-                <div class="flex gap-3 mt-auto">
-                  <a href="https://github.com/KylerChan/simple-budgeting" target="_blank" rel="noopener" class="btn-code px-3 py-1.5 border rounded-md text-sm focus-ring">Code</a>
-                  <a href="https://simple-budgeting.vercel.app/" target="_blank" rel="noopener" class="btn-demo px-3 py-1.5 border rounded-md text-sm focus-ring">Live</a>
-                </div>
-              </div>
-
-              <div class="card p-5 flex flex-col h-full shadow-md hover:shadow-lg transition">
-                <img src="/assets/python-thumb.png" alt="Website Analyzer results screen showing metrics and headers" class="rounded-md mb-4 w-full max-h-40 object-contain" />
-                <h3 class="font-semibold text-lg mb-2">Website Analyzer</h3>
-                <p class="text-slate-600 text-sm mb-3">Python tool to inspect headers, security info and surface useful site metrics.</p>
-                <div class="flex gap-2 mb-3">
-                  <span class="px-2 py-1 bg-emerald-100 text-emerald-700 rounded text-xs">Python</span>
-                  <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">Analysis</span>
-                </div>
-                <div class="flex gap-3 mt-auto">
-                  <a href="https://github.com/KylerChan/website-analysis" target="_blank" rel="noopener" class="btn-code px-3 py-1.5 border rounded-md text-sm focus-ring">Code</a>
-                </div>
+              <div class="flex gap-3 mt-auto">
+                <a href="https://github.com/KylerChan/email-validation" target="_blank" rel="noopener" class="btn-code px-3 py-1.5 border rounded-md text-sm focus-ring">Code</a>
               </div>
             </div>
-          </section>
 
-          <section id="skills" class="mt-8">
-            <div class="flex items-center justify-between mb-4">
-              <h2 class="text-xl font-semibold">Skills</h2>
-              <p class="text-sm text-slate-500">Focused list</p>
-            </div>
-
-            <div class="grid gap-6 grid-cols-1 md:grid-cols-2">
-              <div class="card p-4 cursor-pointer">
-                <h4 class="font-semibold mb-2">Frontend</h4>
-                <ul class="text-sm text-slate-600 space-y-1">
-                  <li>HTML — semantic, accessible markup</li>
-                  <li>CSS / Tailwind — responsive layouts & utilities</li>
-                  <li>JavaScript — DOM, fetch, small interactive components</li>
-                </ul>
+            <div class="card p-5 flex flex-col h-full shadow-md hover:shadow-lg transition">
+              <img src="/my-portfolio/assets/dog-gen-thumb.png" alt="Dog Generator demo showing a random dog image" class="rounded-md mb-4 w-full max-h-40 object-contain" />
+              <h3 class="font-semibold text-lg mb-2">Dog Generator</h3>
+              <p class="text-slate-600 text-sm mb-3">Random dog images from a public API — small demo showing async fetch and responsive UI.</p>
+              <div class="flex gap-2 mb-3">
+                <span class="px-2 py-1 bg-emerald-100 text-emerald-700 rounded text-xs">JavaScript</span>
+                <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">API</span>
+                <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">Responsive</span>
               </div>
-
-              <div class="card p-4 cursor-pointer">
-                <h4 class="font-semibold mb-2">Tools</h4>
-                <ul class="text-sm text-slate-600 space-y-1">
-                  <li>VS Code</li>
-                  <li>Git & GitHub</li>
-                  <li>Browser devtools</li>
-                </ul>
+              <div class="flex gap-3 mt-auto">
+                <a href="https://github.com/KylerChan/dog-gen" target="_blank" rel="noopener" class="btn-code px-3 py-1.5 border rounded-md text-sm focus-ring">Code</a>
+                <a href="https://dog-gen.vercel.app/" target="_blank" rel="noopener" class="btn-demo px-3 py-1.5 border rounded-md text-sm focs-ring">Live</a>
               </div>
             </div>
-          </section>
 
-          <section id="contact" class="mt-8">
-            <div class="flex items-center justify-between mb-4">
-              <h2 class="text-xl font-semibold">Let's Connect</h2>
-              <p class="text-sm text-slate-500">Say hello</p>
-            </div>
-
-            <div class="card p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="flex flex-col gap-4">
-                <p class="text-slate-600">Prefer email? Use the button below or the form. If the form fails there is a mailto fallback.</p>
-
-                <div class="inline-flex self-start w-max items-center bg-white border rounded-md overflow-hidden shadow-sm divide-x divide-gray-100">
-                  <a href="mailto:kyler.chanpinhan@gmail.com" id="emailLink" class="px-4 py-2 text-sm text-slate-800 hover:bg-slate-50 block">
-                    kyler.chanpinhan@gmail.com
-                  </a>
-                  <button id="copyEmailBtn" type="button" aria-label="Copy email" class="px-3 py-2 hover:bg-slate-50 text-slate-700 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                  </button>
-                </div>
-                <span id="emailCopyStatus" class="text-sm text-slate-500 ml-3" aria-live="polite"></span>
-
-                <div class="flex gap-2">
-                  <a href="https://github.com/KylerChan" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-3 py-2 border rounded-md text-sm">GitHub</a>
-                  <a href="https://x.com/kylercph" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-3 py-2 border rounded-md text-sm">Twitter</a>
-                </div>
+            <div class="card p-5 flex flex-col h-full shadow-md hover:shadow-lg transition">
+              <img src="/my-portfolio/assets/budget-thumb.png" alt="Budget Tracker showing transaction list and summary" class="rounded-md mb-4 w-full max-h-40 object-contain" />
+              <h3 class="font-semibold text-lg mb-2">Budget Tracker</h3>
+              <p class="text-slate-600 text-sm mb-3">Simple local-storage budgeting app to track expenses and savings goals.</p>
+              <div class="flex gap-2 mb-3">
+                <span class="px-2 py-1 bg-emerald-100 text-emerald-700 rounded text-xs">JavaScript</span>
+                <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">LocalStorage</span>
+                <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">UI</span>
               </div>
-
-              <form id="contactForm" class="space-y-3 bg-white rounded-md p-4 shadow-sm" novalidate>
-                <label class="block">
-                  <span class="text-sm font-medium text-slate-700">Name</span>
-                  <input id="name" name="name" required type="text" class="mt-1 block w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-emerald-200" />
-                  <span class="text-xs text-red-500 mt-1 hidden" id="nameError">Please enter your name.</span>
-                </label>
-
-                <label class="block">
-                  <span class="text-sm font-medium text-slate-700">Email</span>
-                  <input id="email" name="email" required type="email" class="mt-1 block w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-emerald-200" />
-                  <span class="text-xs text-red-500 mt-1 hidden" id="emailError">Please enter a valid email.</span>
-                </label>
-
-                <label class="block">
-                  <span class="text-sm font-medium text-slate-700">Message</span>
-                  <textarea id="message" name="message" required rows="4" class="mt-1 block w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-emerald-200"></textarea>
-                  <span class="text-xs text-red-500 mt-1 hidden" id="messageError">Please enter a message.</span>
-                </label>
-
-                <div class="flex items-center gap-3">
-                  <button id="submitBtn" type="submit" class="px-4 py-2 bg-emerald-600 text-white rounded-md hover:bg-emerald-700">Send</button>
-                  <div id="formStatus" class="text-sm text-slate-600" aria-live="polite"></div>
-                </div>
-
-                <div class="text-xs text-slate-500">
-                  If the form can't submit, send an email directly to
-                  <a href="mailto:kyler.chanpinhan@gmail.com" class="text-emerald-600 hover:underline">kyler.chanpinhan@gmail.com</a>.
-                </div>
-              </form>
+              <div class="flex gap-3 mt-auto">
+                <a href="https://github.com/KylerChan/simple-budgeting" target="_blank" rel="noopener" class="btn-code px-3 py-1.5 border rounded-md text-sm focus-ring">Code</a>
+                <a href="https://simple-budgeting.vercel.app/" target="_blank" rel="noopener" class="btn-demo px-3 py-1.5 border rounded-md text-sm focus-ring">Live</a>
+              </div>
             </div>
-          </section>
-        </div>
+
+            <div class="card p-5 flex flex-col h-full shadow-md hover:shadow-lg transition">
+              <img src="/my-portfolio/assets/python-thumb.png" alt="Website Analyzer results screen showing metrics and headers" class="rounded-md mb-4 w-full max-h-40 object-contain" />
+              <h3 class="font-semibold text-lg mb-2">Website Analyzer</h3>
+              <p class="text-slate-600 text-sm mb-3">Python tool to inspect headers, security info and surface useful site metrics.</p>
+              <div class="flex gap-2 mb-3">
+                <span class="px-2 py-1 bg-emerald-100 text-emerald-700 rounded text-xs">Python</span>
+                <span class="px-2 py-1 bg-slate-100 text-slate-700 rounded text-xs">Analysis</span>
+              </div>
+              <div class="flex gap-3 mt-auto">
+                <a href="https://github.com/KylerChan/website-analysis" target="_blank" rel="noopener" class="btn-code px-3 py-1.5 border rounded-md text-sm focus-ring">Code</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" class="mt-8">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-xl font-semibold">Skills</h2>
+            <p class="text-sm text-slate-500">Focused list</p>
+          </div>
+
+          <div class="grid gap-6 grid-cols-1 md:grid-cols-2">
+            <div class="card p-4 cursor-pointer">
+              <h4 class="font-semibold mb-2">Frontend</h4>
+              <ul class="text-sm text-slate-600 space-y-1">
+                <li>HTML — semantic, accessible markup</li>
+                <li>CSS / Tailwind — responsive layouts & utilities</li>
+                <li>JavaScript — DOM, fetch, small interactive components</li>
+              </ul>
+            </div>
+
+            <div class="card p-4 cursor-pointer">
+              <h4 class="font-semibold mb-2">Tools</h4>
+              <ul class="text-sm text-slate-600 space-y-1">
+                <li>VS Code</li>
+                <li>Git & GitHub</li>
+                <li>Browser devtools</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="mt-8">
+          <div class="flex items-center justify-between mb-4">
+            <h2 class="text-xl font-semibold">Let's Connect</h2>
+            <p class="text-sm text-slate-500">Say hello</p>
+          </div>
+
+          <div class="card p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="flex flex-col gap-4">
+              <p class="text-slate-600">Prefer email? Use the button below or the form. If the form fails there is a mailto fallback.</p>
+
+              <div class="inline-flex self-start w-max items-center bg-white border rounded-md overflow-hidden shadow-sm divide-x divide-gray-100">
+                <a href="mailto:kyler.chanpinhan@gmail.com" id="emailLink" class="px-4 py-2 text-sm text-slate-800 hover:bg-slate-50 block">
+                  kyler.chanpinhan@gmail.com
+                </a>
+                <button id="copyEmailBtn" type="button" aria-label="Copy email" class="px-3 py-2 hover:bg-slate-50 text-slate-700 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </button>
+              </div>
+              <span id="emailCopyStatus" class="text-sm text-slate-500 ml-3" aria-live="polite"></span>
+
+              <div class="flex gap-2">
+                <a href="https://github.com/KylerChan" target="_blank" rel="noopener noreferrer" aria-label="View GitHub" class="inline-flex items-center justify-center px-3 py-2 border rounded-md text-sm text-slate-800 hover:bg-slate-50">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 .5C5.648.5.5 5.648.5 12c0 5.086 3.292 9.392 7.86 10.912.575.106.784-.25.784-.556 0-.276-.01-1.005-.016-1.975-3.196.695-3.872-1.54-3.872-1.54-.523-1.33-1.277-1.684-1.277-1.684-1.045-.714.08-.699.08-.699 1.156.082 1.765 1.188 1.765 1.188 1.027 1.76 2.695 1.252 3.353.958.104-.745.402-1.252.731-1.54-2.552-.29-5.236-1.276-5.236-5.677 0-1.254.449-2.279 1.186-3.081-.119-.29-.514-1.457.113-3.036 0 0 .967-.31 3.168 1.177.92-.256 1.907-.384 2.89-.389.982.005 1.97.133 2.892.389 2.198-1.487 3.162-1.177 3.162-1.177.629 1.579.234 2.746.115 3.036.74.802 1.185 1.827 1.185 3.081 0 4.412-2.689 5.382-5.253 5.668.413.355.78 1.056.78 2.129 0 1.536-.014 2.775-.014 3.152 0 .309.206.668.79.555C20.71 21.392 24 17.086 24 12 24 5.648 18.352.5 12 .5z"/>
+                  </svg>
+                  <span class="sr-only">GitHub</span>
+                </a>
+
+                <a href="https://x.com/kylercph" target="_blank" rel="noopener noreferrer" aria-label="View Twitter" class="inline-flex items-center justify-center px-3 py-2 border rounded-md text-sm text-slate-800 hover:bg-slate-50">
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.643 4.937c-.835.37-1.732.62-2.675.733.962-.576 1.7-1.49 2.048-2.578-.9.53-1.897.915-2.958 1.123-.85-.905-2.06-1.47-3.4-1.47-2.573 0-4.657 2.085-4.657 4.657 0 .365.042.72.12 1.062-3.873-.195-7.307-2.05-9.607-4.872-.401.688-.63 1.486-.63 2.338 0 1.615.822 3.04 2.073 3.876-.763-.024-1.48-.234-2.106-.583v.059c0 2.254 1.604 4.135 3.734 4.562-.39.106-.8.163-1.223.163-.298 0-.588-.029-.87-.083.588 1.836 2.295 3.173 4.313 3.212-1.58 1.237-3.566 1.974-5.725 1.974-.372 0-.739-.022-1.101-.064 2.04 1.308 4.462 2.071 7.07 2.071 8.484 0 13.124-7.03 13.124-13.125 0-.2-.005-.399-.014-.597.9-.65 1.68-1.462 2.298-2.392z"/>
+                  </svg>
+                  <span class="sr-only">Twitter</span>
+                </a>
+              </div>
+            </div>
+
+            <form id="contactForm" action="https://formspree.io/f/xanbgzgy" method="POST" class="space-y-3 bg-white rounded-md p-4 shadow-sm" novalidate>
+              <input type="text" name="website" id="website" tabindex="-1" autocomplete="off" class="sr-only" aria-hidden="true" />
+              <label class="block">
+                <span class="text-sm font-medium text-slate-700">Name</span>
+                <input id="name" name="name" required type="text" class="mt-1 block w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-emerald-200" />
+                <span class="text-xs text-red-500 mt-1 hidden" id="nameError">Please enter your name.</span>
+              </label>
+              <label class="block">
+                <span class="text-sm font-medium text-slate-700">Email</span>
+                <input id="email" name="email" required type="email" class="mt-1 block w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-emerald-200" />
+                <span class="text-xs text-red-500 mt-1 hidden" id="emailError">Please enter a valid email.</span>
+              </label>
+              <label class="block">
+                <span class="text-sm font-medium text-slate-700">Message</span>
+                <textarea id="message" name="message" required rows="4" class="mt-1 block w-full px-3 py-2 border rounded-md focus:ring-2 focus:ring-emerald-200"></textarea>
+                <span class="text-xs text-red-500 mt-1 hidden" id="messageError">Please enter a message.</span>
+              </label>
+              <div class="flex items-center gap-3">
+                <button id="submitBtn" type="submit" class="px-4 py-2 bg-emerald-600 text-white rounded-md hover:bg-emerald-700">Send</button>
+                <div id="formStatus" class="text-sm text-slate-600" aria-live="polite"></div>
+              </div>
+              <div class="text-xs text-slate-500">
+                If the form can't submit, send an email directly to
+                <a href="mailto:kyler.chanpinhan@gmail.com" class="text-emerald-600 hover:underline">kyler.chanpinhan@gmail.com</a>.
+              </div>
+            </form>
+          </div>
+        </section>
       </div>
     </main>
   </div>
 
+  <a href="#main" class="sr-only focus:not-sr-only p-2 bg-white border rounded-md">Skip to content</a>
 </body>
-<script src="script.js"></script>
+<!-- <script src="script.js"></script> -->
+<script src="/my-portfolio/unobfuscated.js"></script>
 </html>
